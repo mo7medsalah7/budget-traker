@@ -24,6 +24,12 @@ export const BudgetProvider = ({ children }) => {
   };
 
   function addBudget({ name, max }) {
+    // if (!name || !max) {
+    //   setBudgets((prevBudgets) => {
+    //     prevBudgets = {};
+    //     return prevBudgets;
+    //   });
+    // }
     setBudgets((prevBudgets) => {
       if (prevBudgets.find((budget) => budget.name === name)) {
         return prevBudgets;
